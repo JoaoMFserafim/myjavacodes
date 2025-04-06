@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Book {
     String name;
     String author;
@@ -52,4 +54,29 @@ public class Book {
     public void setIdentification(int identification) {
         this.identification = identification;
     }
+
+    public void fill(){
+        Scanner read = new Scanner(System.in);
+
+        System.out.println("fill the data so book:");
+
+        System.out.println("Name:");
+        this.name = read.next();
+
+        System.out.println("Author:");
+        this.author = read.next();
+
+        System.out.println("Number of pages:");
+        this.number_of_pages = read.nextInt();
+
+        System.out.println("Price:");
+        this.price = read.nextDouble();
+
+        System.out.println("Number of identification:");
+        this.identification = read.nextInt();
+
+        System.out.println("SUCCESS!!!"+"The data of book is filled");
+    }
+
+
 }
